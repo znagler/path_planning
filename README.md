@@ -5,12 +5,28 @@ In this project your goal is to safely navigate around a virtual highway with ot
 
 ### Process
 I broke the problem up into 3 main sections.
-1. Get the car to stay in its lane
+1. Get the car to stay in its lane and turn smoothly
 2. Get the car to accelerate and decelerate in that lane at reasonable levels, depending on the speed limit and other cars
 3. Have the car change lanes when it can and should
 
 ## Keep in lane
+Th
 
 ## Proper speed and accerlation
 
 ## Change lanes
+
+The main lane-change logic I went with followed this pseudo code.
+```
+if (approaching_a_car){
+  if (can_change_left && didnt_just_change_lanes){
+    change_left()
+  }
+  else if (can_change_right && didnt_just_change_lanes){
+    change_right()
+  } else {
+    slow_down()
+  }
+}
+
+```
