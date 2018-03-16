@@ -281,7 +281,7 @@ int main() {
               if(d < (2+4*lane+2) && d > (2+4*lane-2))
               {
 
-                if((check_car_s > car_s) && ((check_car_s-car_s) <30))
+                if((check_car_s > car_s) && ((check_car_s-car_s) <35))
                 {
                   too_close = true;
                   std::cerr << "Car in front: " << car_id << " : " << std::endl;
@@ -291,7 +291,7 @@ int main() {
               // check other lanes
               else {
                 // if car in other lane is within 25m of us
-                if (abs(check_car_s-car_s) < 25)
+                if (abs(check_car_s-car_s) < 28)
                 {
                  std::cerr << "Car in my S: " << car_id << " : " << check_car_s-car_s << std::endl;
                  if(d < (2+4*(lane-1)+2) && d > (2+4*(lane-1)-2))
